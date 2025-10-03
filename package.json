@@ -1,0 +1,20 @@
+{
+  "name": "herramienta-registro-corbel-tests",
+  "version": "1.0.0",
+  "description": "Test runner for Herramienta-de-Registro-CORBEL",
+  "private": true,
+  "dependencies": {
+    "jsdom": "^21.1.0",
+    "jspdf": "^2.5.1",
+    "html2pdf.js": "^0.9.3"
+  }
+  ,
+  "devDependencies": {
+    "esbuild": "^0.19.0"
+  },
+  "scripts": {
+    "build:pdf-vendor": "node tools/build-pdf-vendor.js",
+    "test:arqueo": "node tools/test-calcular-arqueo.js && node tools/test-arqueo-ui-behavior.js",
+    "test:all": "npm run test:arqueo"
+  }
+}

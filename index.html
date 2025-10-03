@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramienta de Registro CORBEL - Mejorada</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css"> 
+    
+</head>
+<body>
+    <div class="autosave-indicator" id="autosave-indicator">
+        <i class="fas fa-save"></i> Guardando datos...
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-tools"></i> Herramienta de Registro CORBEL - Mejorada</h1>
+            <div class="action-buttons">
+                <button class="btn btn-success" id="export-btn">
+                    <i class="fas fa-file-export"></i> Exportar
+                </button>
+                <button class="btn" id="import-btn">
+                    <i class="fas fa-file-import"></i> Importar
+                </button>
+                <button class="btn btn-warning" id="save-btn">
+                    <i class="fas fa-save"></i> Guardar
+                </button>
+                <button class="btn btn-danger" id="clear-btn">
+                    <i class="fas fa-trash"></i> Limpiar Datos
+                </button>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i> Modo Oscuro
+                </button>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="registro">
+                <i class="fas fa-clipboard-list"></i> Registro General
+            </div>
+            <div class="tab" data-tab="arqueo">
+                <i class="fas fa-calculator"></i> Cuadrar Caja
+            </div>
+            <div class="tab" data-tab="catalogo">
+                <i class="fas fa-boxes"></i> Catálogo
+            </div>
+            <div class="tab" data-tab="mecanicos">
+                <i class="fas fa-user-cog"></i> Mecánicos
+            </div>
+            <div class="tab" data-tab="resumen">
+                <i class="fas fa-chart-bar"></i> Resumen
+            </div>
+            <div class="tab" data-tab="relacion">
+                <i class="fas fa-handshake"></i> Relaciones
+            </div>
+        </div>
+
+        <div id="registro" class="tab-content active"></div>
+        <div id="arqueo" class="tab-content"></div>
+        <div id="catalogo" class="tab-content"></div>
+        <div id="mecanicos" class="tab-content"></div>
+        <div id="resumen" class="tab-content"></div>
+        <div id="relacion" class="tab-content"></div>
+    </div>
+
+    <input type="file" id="excel-upload" class="hidden" accept=".xlsx, .xls">
+    <!-- Cargar scripts en el orden correcto -->
+    <script src="js/app.js"></script>
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/utils/storage.js"></script>
+    <script src="js/utils/excel.js"></script>
+    <script src="js/modules/Registro/validation.js"></script>
+    <script src="js/modules/Registro/utils.js"></script>
+    <script src="js/modules/Registro/forms.js"></script>
+    <script src="js/modules/Registro/table.js"></script>
+    <script src="js/modules/Registro/registro.js"></script>
+    <!-- Vendor bundle generado localmente con jsPDF + html2pdf -->
+    <script src="vendor/pdf-bundle.js"></script>
+    <script src="js/modules/arqueo.js"></script>
+    <script src="js/modules/catalogo.js"></script>
+    <script src="js/modules/mecanicos.js"></script>
+    <script src="js/modules/resumen.js"></script>
+    <script src="js/modules/relacion.js"></script>
+    
+</body>
+</html>
