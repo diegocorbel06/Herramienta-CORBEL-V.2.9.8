@@ -58,3 +58,8 @@ filtros de busqueda,botones para editar y/o eliminar los gastos en el arqueo de 
 En el apartado/modulo de relaciones debemos implementar un sistema de proveedores, utilizar los formatos para agregar items, visualizar el catalogo con los items me parece adecuado para ir optimizando este sergmento.
 
 Tengo una lista de nombres de productos y servicios para subir al catalogo, con una codificacion diferente al sistema de ids por lo que el sistema de ids me preocupa como puedo unificar, optimizar y mejorar este punto, debido a que posteriormente ire añadiendo mas items al catalogo u otros.
+Vamos a optimizar el modulo de arqueo de caja:
+- Solo se realiza un arqueo de caja por día entonces en "Fecha (o rango)" (Cambiar a "Fecha de Arqueo") solo debe existir una entrada de solo una fecha especifica
+- Así como se evidencian los montos en relación a los tipos de ingresos tambien deben visualizarce los montos utilizados para los gastos segun correspondan.
+- Garantizar y optimizar la maxima la experiencia del usuario
+- Identificar mejores necesarias o de referencias que puedan integrarse a nuestra herramienta y que optifimicen este modulo.
